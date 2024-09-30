@@ -37,7 +37,72 @@ const add = async (req, res) => {
   }
 };
 
+const remove = async (req, res) => {
+  try {
+    const { id } = req.body;
+
+    await prisma.book.delete({
+      where: {
+        id,
+      },
+    });
+
+    return res.status(204).json("OK");
+  } catch (error) {
+    console.log(error);
+
+    return res.status(500).json({
+      message: "Failed to remove the book.",
+    });
+  }
+};
+
+const edit = async (req, res) => {
+  try {
+    const data = req.body;
+    const id = data.id;
+
+    await prisma.book.update({
+      where: {
+        id,
+      },
+      data,
+    });
+
+    return res.status(204).json("OK");
+  } catch (error) {
+    console.log(error);
+
+    return res.status(500).json({
+      message: "Failed to edit the book.",
+    });
+  }
+};
+
+const book = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const book = await prisma.book.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    return res.status(200).json(book);
+  } catch (error) {
+    console.log(error);
+
+    return res.status(500).json({
+      message: "Failed to get the book.",
+    });
+  }
+};
+
 module.exports = {
   all,
   add,
+  remove,
+  edit,
+  book,
 };
