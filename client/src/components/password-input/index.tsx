@@ -4,7 +4,7 @@ import { NamePath } from "antd/es/form/interface";
 type Props = {
   name: string;
   placeholder: string;
-  dependencies: NamePath[];
+  dependencies?: NamePath[];
 };
 
 export const PasswordInput = ({ name, placeholder, dependencies }: Props) => {
@@ -32,7 +32,7 @@ export const PasswordInput = ({ name, placeholder, dependencies }: Props) => {
             } else {
               if (value.length < 6) {
                 return Promise.reject(
-                  new Error("Passwords must be 6 or more characters long")
+                  new Error("Passwords must be at least 6 characters long")
                 );
               }
               return Promise.resolve();
