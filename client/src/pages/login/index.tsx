@@ -1,5 +1,5 @@
 import { Card, Form, Row, Space, Typography } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/layout";
 import { CustomInput } from "../../components/custom-input";
 import { PasswordInput } from "../../components/password-input";
@@ -11,12 +11,14 @@ import { useState } from "react";
 import { ErrorMessage } from "../../components/error-message";
 
 export const Login = () => {
+  const navigate = useNavigate();
   const [loginUser, loginUserResult] = useLoginMutation();
   const [error, setError] = useState("");
 
   const login = async (data: UserData) => {
     try {
       await loginUser(data).unwrap();
+      navigate("/");
     } catch (error) {
       const maybeError = isErrorWithMessage(error);
       if (maybeError) {
