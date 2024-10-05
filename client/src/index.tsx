@@ -8,6 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Paths } from "./paths";
 import { Login } from "./pages/login";
 import { Signup } from "./pages/signup";
+import { Auth } from "./features/auth/auth";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -36,7 +37,9 @@ root.render(
           algorithm: theme.darkAlgorithm,
         }}
       >
-        <RouterProvider router={router} />
+        <Auth>
+          <RouterProvider router={router} />
+        </Auth>
       </ConfigProvider>
     </Provider>
   </React.StrictMode>
