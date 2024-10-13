@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { store } from "./app/store";
 import reportWebVitals from "./reportWebVitals";
 import { Paths } from "./paths";
+import { Books } from "./pages/books";
 import { Login } from "./pages/login";
 import { Signup } from "./pages/signup";
 import { Auth } from "./features/auth/auth";
@@ -14,7 +15,7 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: Paths.home,
-    element: <h1>Book Tracker</h1>,
+    element: <Books />,
   },
   {
     path: Paths.login,
