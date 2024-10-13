@@ -13,6 +13,7 @@ import { Auth } from "./features/auth/auth";
 import "./index.css";
 import { AddBook } from "./pages/add-book";
 import { Status } from "./pages/status";
+import { Book } from "./pages/book";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: `${Paths.status}/:status`,
     element: <Status />,
+  },
+  {
+    path: `${Paths.book}/:id`,
+    element: <Book />,
   },
 ]);
 
