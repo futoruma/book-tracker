@@ -11,6 +11,8 @@ import { Login } from "./pages/login";
 import { Signup } from "./pages/signup";
 import { Auth } from "./features/auth/auth";
 import "./index.css";
+import { AddBook } from "./pages/add-book";
+import { Status } from "./pages/status";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: Paths.signup,
     element: <Signup />,
+  },
+  {
+    path: Paths.bookAdd,
+    element: <AddBook />,
+  },
+  {
+    path: `${Paths.status}/:status`,
+    element: <Status />,
   },
 ]);
 

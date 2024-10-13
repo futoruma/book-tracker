@@ -45,11 +45,13 @@ export const Books = () => {
     }
   }, [navigate, user]);
 
+  const goToAddBook = () => navigate(Paths.bookAdd);
+
   return (
     <Layout>
       <CustomButton
         type="primary"
-        onClick={() => null}
+        onClick={goToAddBook}
         icon={<PlusCircleOutlined />}
       >
         Add
