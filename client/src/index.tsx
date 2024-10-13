@@ -14,6 +14,7 @@ import "./index.css";
 import { AddBook } from "./pages/add-book";
 import { Status } from "./pages/status";
 import { Book } from "./pages/book";
+import { EditBook } from "./pages/edit-book";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: `${Paths.book}/:id`,
     element: <Book />,
+  },
+  {
+    path: `${Paths.bookEdit}/:id`,
+    element: <EditBook />,
   },
 ]);
 
