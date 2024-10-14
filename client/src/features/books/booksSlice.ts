@@ -1,5 +1,5 @@
-import { Book } from "@prisma/client";
 import { createSlice } from "@reduxjs/toolkit";
+import { Book } from "@prisma/client";
 import { booksApi } from "../../app/services/books";
 import { RootState } from "../../app/store";
 

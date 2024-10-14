@@ -9,8 +9,8 @@ router.get("/:id", auth, book);
 
 router.post("/add", auth, add);
 
-router.post("/remove/:id", auth, remove);
-
 router.put("/edit/:id", auth, edit);
+
+router.post("/remove/:id", auth, remove);
 
 module.exports = router;

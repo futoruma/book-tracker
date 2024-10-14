@@ -5,12 +5,12 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { Layout as AntdLayout, Space, Typography } from "antd";
-import { Link, useNavigate } from "react-router-dom";
-import { CustomButton } from "../custom-button";
-import { Paths } from "../../paths";
-import styles from "./index.module.css";
 import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import styles from "./index.module.css";
+import { CustomButton } from "../custom-button";
 import { logout, selectUser } from "../../features/auth/authSlice";
+import { Paths } from "../../paths";
 
 export const Header = () => {
   const user = useSelector(selectUser);

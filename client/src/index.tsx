@@ -1,19 +1,19 @@
-import React from "react";
 import { ConfigProvider, theme } from "antd";
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { store } from "./app/store";
-import { Paths } from "./paths";
-import { Books } from "./pages/books";
-import { Login } from "./pages/login";
-import { Signup } from "./pages/signup";
-import { Auth } from "./features/auth/auth";
-import "./index.css";
 import { AddBook } from "./pages/add-book";
-import { Status } from "./pages/status";
+import { Auth } from "./features/auth/auth";
 import { Book } from "./pages/book";
+import { Books } from "./pages/books";
 import { EditBook } from "./pages/edit-book";
+import { Login } from "./pages/login";
+import { Paths } from "./paths";
+import { Signup } from "./pages/signup";
+import "./index.css";
+import { Status } from "./pages/status";
+import { store } from "./app/store";
 
 const router = createBrowserRouter([
   {

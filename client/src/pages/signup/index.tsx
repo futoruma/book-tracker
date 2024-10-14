@@ -1,17 +1,17 @@
 import { Card, Form, Row, Space, Typography } from "antd";
-import { Link, useNavigate } from "react-router-dom";
-import { Layout } from "../../components/layout";
-import { CustomInput } from "../../components/custom-input";
-import { PasswordInput } from "../../components/password-input";
-import { CustomButton } from "../../components/custom-button";
-import { Paths } from "../../paths";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../features/auth/authSlice";
 import { useState } from "react";
-import { useSignupMutation } from "../../app/services/auth";
+import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import { User } from "@prisma/client";
-import { isErrorWithMessage } from "../../utils/is-error-with-message";
+import { CustomButton } from "../../components/custom-button";
+import { CustomInput } from "../../components/custom-input";
 import { ErrorMessage } from "../../components/error-message";
+import { isErrorWithMessage } from "../../utils/is-error-with-message";
+import { Layout } from "../../components/layout";
+import { PasswordInput } from "../../components/password-input";
+import { Paths } from "../../paths";
+import { selectUser } from "../../features/auth/authSlice";
+import { useSignupMutation } from "../../app/services/auth";
 
 type SignupData = Omit<User, "id"> & { confirmPassword: string };
 
