@@ -4,7 +4,6 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { store } from "./app/store";
-import reportWebVitals from "./reportWebVitals";
 import { Paths } from "./paths";
 import { Books } from "./pages/books";
 import { Login } from "./pages/login";
@@ -65,5 +64,3 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-
-reportWebVitals();
