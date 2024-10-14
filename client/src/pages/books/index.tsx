@@ -13,22 +13,22 @@ import { selectUser } from "../../features/auth/authSlice";
 
 const columns: ColumnsType<Book> = [
   {
-    title: "title",
+    title: "Title",
     dataIndex: "title",
     key: "title",
   },
   {
-    title: "author",
+    title: "Author",
     dataIndex: "author",
     key: "author",
   },
   {
-    title: "language",
+    title: "Language",
     dataIndex: "language",
     key: "language",
   },
   {
-    title: "description",
+    title: "Description",
     dataIndex: "description",
     key: "description",
   },
