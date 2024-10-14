@@ -1,10 +1,5 @@
-import {
-  LoginOutlined,
-  LogoutOutlined,
-  BookOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-import { Layout as AntdLayout, Space, Typography } from "antd";
+import { LogoutOutlined, BookOutlined } from "@ant-design/icons";
+import { Layout as AntdLayout, Space } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./index.module.css";
